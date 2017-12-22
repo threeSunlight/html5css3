@@ -1,0 +1,919 @@
+/*
+* @Author: 王斌晶
+* @Date:   2017-11-09 14:02:54
+* @Last Modified by:   王斌晶
+* @Last Modified time: 2017-11-14 16:27:44
+*/
+/* 购物中心右上角的 */
+*{
+	margin: 0;
+	padding: 0;
+}
+.center{
+	width: 101px;
+	height: 101px;
+	position: fixed;
+	right: 70px;
+	top: 30px;
+	z-index: 1000;
+	animation: center 1s linear infinite alternate;
+}
+
+@keyframes center{
+	from {
+
+		top: 30px;
+	}
+	to{
+		top: 50px;
+	}
+}
+/* 右下角的继续往下 */
+.down{
+	width: 171px;
+	height: 61px;
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+	z-index: 1000;
+	animation: down 1s linear infinite alternate;
+}
+
+@keyframes down{
+	from{
+		bottom: 30px;
+	}
+	to{
+		bottom: 60px;
+	}
+}
+
+/* 设置版心 */
+.w{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* 开始后设置第一屏 */
+.section01{
+	background: url("../img/01-bg.png") no-repeat bottom;
+}
+ .section01 .one .fly{
+	width: 470px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -235px;
+
+	animation: fly 1s linear infinite alternate;
+}
+@keyframes fly{
+	from{
+		top: 50px;
+	}
+	to {
+		top: 70px;
+	}
+}
+
+.one .goods{
+	width: 824px;
+	height: 274px;
+	position: absolute;
+	bottom: 161px;
+	left: 95px;
+}
+
+.one .sofo{
+	width: 134px;
+	height: 147px;
+	position: absolute;
+	bottom: 350px;
+	left: 234px;
+
+	animation : sofo 1s  linear  infinite alternate ;
+}
+
+@keyframes sofo{
+	from{
+		bottom: 350px;
+	} 
+	to{
+		bottom: 360px;
+	}
+}
+
+
+
+
+/* 第二屏 */
+.section02 {
+	width: 100%;
+	background: url("../img/02-bg.png") no-repeat bottom;
+}
+ .section02 .text{
+	width: 363px;
+	height: 27px;
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translate(-50%);
+}
+.section02 .search_box{
+	width: 222px;
+	height: 45px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 310px;
+	opacity: 1;
+}
+
+.animate .section02 .search_box{
+	animation: search 4s linear forwards;
+}
+@keyframes search{
+	from{
+		top: 50%;
+		margin-left: 310px;
+		opacity: 0;
+		transform: scale(1);
+	}
+	25%{
+		top: 50%;
+		margin-left: -110px;
+		opacity: 1;
+		transform: scale(1);
+	}
+	75%{
+		top:  50%;
+		margin-left: -110px;
+		opacity: 1;
+		transform: scale(1);
+	}
+	to{
+		top:  175px;
+		margin-left: 83px;
+		opacity: 1;
+		transform: scale(0.8);
+	}
+}
+.section02 .stext{
+	width: 68px;
+	height: 32px;                   
+	position: absolute;
+	left: 50%;
+	top: 5px;
+	transform: translate(-50%);
+	opacity: 0;
+}
+.animate .section02 .stext {
+	animation: key 1s 1s linear forwards;
+}
+
+@keyframes key {
+
+	 from {
+	 	 opacity: 0;
+	 }
+
+	 to {
+	     opacity: 1;
+	 }
+}
+
+  .section02 .goods{
+	width: 441px;
+	height: 218px;
+	position: absolute;
+	/* display: none; */
+	bottom: 210px;
+	left: 50%;
+	margin-left: -230px;
+	transform: scale(0);
+	transform-origin: right bottom;
+
+}
+.animate .section02 .goods {
+	animation: goods 1s 3s linear forwards;
+}
+
+
+@keyframes goods{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+.section02 .sofa{
+	position: absolute;
+	left: 50%;
+	margin-left: -159px;
+	bottom: 287px;
+	transform: scale(0.5);
+	opacity: 0;
+
+	z-index: 10;
+}
+.section02 .sofa.animated {
+	animation: section02_section03  1.5s linear forwards ;
+}
+
+/* 隐藏的沙发从第二屏到第三屏幕显示的动画 */
+@keyframes section02_section03 {
+	from{
+		transform: scale(0.5);
+		opacity: 1;
+		bottom: 287px;
+	}
+	to{
+		transform: scale(1);
+		opacity: 1;
+		bottom: -400px;
+		margin-left: -223px ;
+	}
+}
+ 
+
+
+
+
+
+/* 第三屏 */
+.section03{
+	background: url('../img/03-bg.png') no-repeat bottom;
+}
+.section03 .threen .size {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+/* 尺寸的大小的css */
+.section03 .threen .size img{
+	position: absolute;
+}
+.section03 .threen .size .two{
+	display: none;
+}
+
+.section03 .threen .changge {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 40px;
+	margin-top: 170px;
+}
+.section03 .threen .changge img{
+	position: absolute;
+}
+
+.section03 .threen .changge .two{
+	display:  none;
+}
+
+.section03 .threen .luobo{
+	width: 207px;
+	height: 166px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -240px;
+	margin-top: -100px;
+	opacity: 0;
+	z-index: 100;
+}
+
+
+/* 从第三屏到第四屏 的动画 */
+.section03  .threen .luobo.animated{
+	animation: section03_section04 1.5s linear;
+}
+
+@keyframes section03_section04 {
+	from{
+		margin-left: -240px;
+		margin-top: -100px;
+		opacity: 1;
+	}
+	to{
+		margin-left: -129px;
+		margin-top: 600px;
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+/* 第四屏 */
+.section04{
+	width: 100%;
+	background : url("../img/04-bg.png");
+}
+.section04  .cloud{
+	width: 882px;
+	height: 120px;
+	position: absolute;
+	top: 30px;
+	margin-left: 80px;
+
+
+	animation: cloud 10s linear alternate infinite;
+}
+@keyframes cloud{
+	from{
+		margin-left: 80px;
+	}
+	to{
+		margin-left: 160px;
+	}
+}
+
+.section04  .text{
+	width: 429px;
+	height: 31px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -215px;
+	margin-top: -230px;
+	opacity: 0.8;
+}
+.section04 .four .text img{
+	position: absolute;
+}
+.section04  .four .text .two{
+	display:  none;
+}
+.section04  .four .address .one{
+	width: 283px;
+	height: 270px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -200px;
+	margin-left: -160px;
+	display: none;
+}
+
+.section04  .four .address .two{
+	position:  absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -111px;
+	margin-top: 131px ;
+	display: none;
+}
+
+.section04  .car  .cars{
+	width: 407px;
+	height: 346px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -278px;
+	margin-top: -112px;
+
+	/* z-index: 100; */
+}
+
+.section04  .car  .cars.animated{
+	animation: cars 1.5s linear  forwards;
+}
+@keyframes cars {
+	from {
+		margin-left: -278px;
+	}
+	to{
+		margin-left: 700px;
+	}
+}
+
+.section04  .car  .sofa{
+	width: 204px;
+	height: 198px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -130px;
+	margin-top: -162px;
+	display: none;
+
+	animation: sofa 1.5s linear forwards;                                       
+}
+
+@keyframes  sofa{
+	from{
+		margin-left: -130px;
+	}
+	to{
+		margin-left: 700px;
+	}
+}
+
+
+
+
+/* 第四屏到第五屏的动画 */
+
+.section04 .four .sofa1{
+	position: absolute;
+	bottom: 50px;
+	/* bottom: -515px; */
+	left: 250px;
+	 z-index: 100; 
+	opacity: 0;
+
+}
+.section04 .four .sofa1.animated{
+	animation: section04_section05 3s linear  forwards;
+}
+
+@keyframes section04_section05{
+	from{
+		opacity: 0.9;
+		bottom: 50px;
+	}
+	50%{
+		opacity: 0.9;
+		bottom: -515px;
+	}
+	to{
+		opacity: 0.9;
+		bottom: -650px;
+	}
+}
+
+
+/* 第五屏 */
+/*引入背景图片*/
+.section05 {
+	height: 100%;
+	width: 100%;
+	background: url("../img/05-bg.png") ;
+	position: relative;
+}             
+/* 将标语设置到合适的位置 */
+ .section05 .text{
+ 	position: absolute;
+ 	left: 50%;
+ 	bottom: 500px;
+ 	margin-left: -600px;
+ }
+
+/* 将左边的银行卡定位到合适的位置 */
+ .section05 .card_order{
+ 	width: 358px;
+ 	height: 221px;
+ 	position: absolute;
+ 	left: 50%;
+ 	bottom: 150px;
+ 	margin-left: -500px;
+ }
+
+ /* 将账单数据定位到银行卡的下面 */
+ .section05 .card_order .order{
+ 	position: absolute;
+ /* 	bottom:150px ; */
+ 	left: 120px;
+ 	bottom: 70px;
+ }
+.section05 .card_order .order.animated{
+	animation: order 3s linear forwards;
+}
+
+@keyframes order{
+	from{
+		bottom: 70px;
+	}
+	50%{
+		bottom: 70px;
+	}
+	to{
+		bottom:150px ;
+	}
+}
+
+.section05 .card_order .card{
+	position: absolute;
+	z-index: 100;
+}
+.section05 .card_order .sofa{
+	width: 207px;
+	height: 166px;
+	position: absolute;
+	margin-left: 60px;
+	bottom: -5px;
+	z-index: 10;
+}
+
+/* 将鼠标和手定位在一个别的盒子里面 */
+
+.section05 .box {
+	 width: 205px;
+	 height: 100%;
+	 position: absolute;
+	 left: 50%;
+	 margin-left: 200px;
+	 overflow: hidden;
+
+}
+.section05 .box .mouse01,
+.section05 .box .mouse02{
+	position: absolute;
+	bottom: 200px;
+	margin-left: 20px;
+ }                   
+.section05 .box .mouse02{
+	display: none;
+}
+
+/* 将手放到合适的位置 */
+.section05 .box  .hand{
+	position: absolute;
+	/* bottom: -17px; */
+	bottom: -376px;
+	margin-left: 6px;
+}
+
+.section05 .box  .hand.animated{
+	animation: hand 1.5s linear forwards;
+}             
+@keyframes hand{
+	from{
+		bottom: -376px;
+	}
+	to{
+		bottom: -17px;
+	}
+}
+
+/* 做从第五屏到第六屏的动画 */
+
+
+
+/* .section05 .card_order .sofa{
+	width: 207px;
+	height: 166px;
+	position: absolute;
+	margin-left: 60px;
+	bottom: -5px;
+} */
+
+.section05 .card_order .sofa.animated{
+	animation: section05_section06 1.5s linear ;
+}
+
+@keyframes section05_section06{
+	from{
+		opacity: 0;
+		bottom: -5px;
+		transform: scale(1);
+		margin-left: 60px;
+
+	}
+	to{
+		bottom: -470px;
+		opacity: 1;
+		transform: scale(0.2);
+		margin-left: 70px;
+	}
+}
+
+
+
+
+/* 第六屏 */
+/* 引入背景图片 */
+.section06{
+	width: 100%;
+	height: 100%;
+	background: url("../img/06-bg.png") no-repeat bottom;
+	position: relative;
+	transition: all 1s  4s linear ;
+}
+
+
+/* 使背景图片进行移动 */
+.section06.animated{
+	background-position: right bottom ;
+}
+
+
+/* 云彩的样式 */
+.section06 .clud  img{
+	position: absolute;
+	z-index: 50;
+}
+.section06 .clud .one{
+	margin-left: 80px;
+	animation: clud 3s linear alternate infinite;
+}
+
+
+@keyframes clud{
+	from{
+		margin-left: 80px;
+	}
+	to{
+		margin-left:140px;
+	}
+}
+
+
+.section06 .clud .two{
+	margin-left:100px;
+	margin-top: 20px;
+	animation: clud1 3s linear alternate infinite;
+}
+@keyframes clud1{
+	from{
+		margin-left: 100px;
+	}
+	to{
+		margin-left: 30px;
+	}
+}
+
+
+/* 小车的样式 */
+.section06 .cars .one{
+	width: 221px;
+	height: 122px;
+	position: absolute;
+	bottom: -1px;
+	left: 280px;
+	z-index: 12;
+}
+
+/* 小车说的话 */
+.section06 .cars .two{
+	position: absolute;
+	bottom: 96px;
+	left: 472px;
+}
+.section06 .cars .threen{
+	position: absolute;
+	bottom: 96px;
+	left: 472px;
+	display: none;
+}
+
+
+/* 上面的标题的话语 */
+.section06 .text img{
+	position: absolute;
+}
+
+.section06 .text{
+	position: absolute;
+	left: 50%;
+	margin-left: -472px;
+	bottom: 620px;
+}
+.section06 .text .two{
+	display: none;
+}
+
+/*快递小哥*/
+.section06 .people .one ,
+.section06 .people .two{
+	position: absolute;
+	left: 276px;
+	bottom: 0px;
+	transform-origin: left bottom;
+	transform: scale(0);
+	transition: transform  1.5s  6s linear,
+				left  1.5s  7s linear,
+				bottom  1.5s  7s linear;
+}
+
+/* 快递小哥添加动画 是他显示 */
+.section06 .people .one.animated{
+	transform: scale(1);
+	left: 576px;
+	bottom: 110px;
+}
+
+
+/* 引入包裹的盒子 */
+.section06 .box{
+	position: absolute;
+	left: 50%;
+	margin-left: -800px;
+	bottom: 380px;
+	/* bottom: 26px; */
+	z-index: 11;
+	transform: scale(1);
+	transition: margin-left 1.3s linear,
+				bottom 1.3s 1.6s linear,
+				transform  1.3s 1.6s linear;
+}
+
+.section06 .box.animated{
+		margin-left: -372px;
+		bottom:26px;
+		transform: scale(0);
+}
+
+
+/* 姑娘和门进行改变 */
+
+.section06 .garden{
+	width: 106px;
+	height: 294px;
+	position: absolute;
+	right: 172px;
+	bottom: 112px;
+}
+.section06 .garden .one{
+	position: absolute;
+	width: 87px;
+	height: 294px;
+	bottom: 3px;
+	right: 115px;
+	transform: scale(0);
+	z-index: 13;
+	transform-origin: right bottom;
+	transition:transform 1s 8s ,
+				right  1.5s 9s,
+				bottom 1.5s 9s;
+
+}
+
+.section06 .garden .one.animated{
+	transform :scale(1);
+	right:  240px;
+	bottom: 7px;
+}
+.section06 .garden .two{
+	width: 106px;
+	height: 150px;
+	position: absolute;
+	right: 112px;
+	bottom: 4px;
+	opacity: 0;
+	transition: all 1s 7s linear;
+}
+
+.section06 .garden .two.animated{
+	opacity: 1;
+}
+
+
+
+
+/* 第七屏幕 */
+.section07 {
+	height: 100%;
+	width: 100%;
+	background: url("../img/07_bg.png") no-repeat bottom; 
+	position: relative;	
+}
+.section07 .start .one{
+	position: absolute;
+	left: 50%;
+	right: 200px;
+	margin-left: -296px;
+	bottom: 442px;
+}
+
+.section07 .text{
+	position: absolute;
+	left: 50%;
+	right: 200px;
+	margin-left: -346px;
+	bottom: 192px;
+	transform: scale(0);
+}
+
+
+.section07 .text.animated {
+
+  animation: section07 2s   linear 2.5s forwards;
+}
+
+@keyframes section07 {
+	 from {
+	 	margin-left: -346px;
+		bottom: 192px;
+		 transform: scale(0);
+	 }
+	 75%{
+	 	margin-left: -400px;
+		bottom: 220px;
+		transform: scale(1);
+	 }
+
+	 to {
+	 	margin-left: -400px;
+		bottom: 220px;
+		transform: scale(0.8);
+	 }
+}
+
+
+.section07 .start .two{
+	position: absolute ;
+	left: 50%;
+	margin-left: -291px;
+	bottom: 447px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+
+}
+.section07 .start .two.animated{
+	 transition: all 0.5s linear;
+}
+
+.section07 .start .threen{
+	position: absolute ;
+	left: 50%;
+	margin-left: -266px;
+	bottom: 447px;          
+}
+.section07 .start .threen.animated{
+	 transition: all 0.5s 1s linear;
+}
+.section07 .start .four{
+	position: absolute ;
+	left: 50%;
+	margin-left: -241px;
+	bottom: 447px;      
+}
+.section07 .start .four.animated{
+	 transition: all 0.5s 2s linear;
+}
+.section07 .start .five{
+	position: absolute ;
+	left: 50%;
+	margin-left: -216px;
+	bottom: 447px;      
+}
+
+.section07 .start .five.animated{
+	 transition: all 0.5s 3s linear;
+}
+.section07 .start .zong{
+	position: absolute ;
+	left: 50%;
+	margin-left: -189px;
+	bottom: 447px;      
+}
+.section07 .start .zong.animated{
+	 transition: all 0.5s 3s linear;
+}
+
+
+
+
+/* 第八屏 */
+.section08{
+	width: 100%;
+	height: 100%;
+	background: url("../img/08-bg.png") ;
+	position: relative;	
+}
+
+/* 让触摸按钮进行显示 */
+.section08 .btns{
+	  width: 389px;
+	  height: 160px;
+	  position: absolute;
+	  left: 50%;
+	  transform: translate(-50%);
+	  top: 100px;
+}
+
+.section08 .btns img{
+	position: absolute;
+}
+
+.section08 .btns .btn3{
+	display: none;
+} 
+
+.section08 .btn4 {
+	width: 105px;
+	 height: 34px;
+	 position: absolute;
+	 left: 50%;
+	 margin-left: 240px;
+	 top: 230px;
+}
+
+.section08 .hand1 {
+	 width: 170px;
+	 height: 449px;
+	 position: absolute;
+	 left: 50%;
+	 transform: translate(-50%);
+	 bottom: 0;
+}
